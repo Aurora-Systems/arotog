@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react"
 import { FormEvent, useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
 
@@ -178,8 +178,8 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  Send Message
+                <Button type="submit" disabled={loading} className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  {loading ? <Loader2 className="animate-spin" size={20} /> : "Send Message"}
                 </Button>
               </form>
             </div>
