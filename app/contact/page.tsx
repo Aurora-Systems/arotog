@@ -8,21 +8,30 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin } from "lucide-react"
-import { useState } from "react"
+import { FormEvent, useRef, useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  const [loading,set_loading] = useState<boolean>(false)
+  const [showAlert, setShowAlert] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const form: any = useRef(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission
-  }
+    const send_application = (e: FormEvent) => {
+        e.preventDefault()
+        set_loading(true)
+        emailjs.sendForm("service_znqk044", "template_7ao1wti", form.current, {
+            publicKey: "RnEtq4qKzX5WQQOEo"
+        }).then(() => {
+            alert("✅ We received your enquiry, expect a call or an email soon!")
+            form.current.reset()
+        }).catch(() => {
+            alert("⚠️ Message not sent, please try again or send us a message on our email support@aurorasystems.co.zw!")
+        }).finally(()=>{
+            set_loading(false)
+        })
+    }
+
 
   return (
     <div className="min-h-screen">
@@ -101,7 +110,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="glass-card p-8">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={send_application} ref={form} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name *
@@ -110,8 +119,9 @@ export default function ContactPage() {
                     id="name"
                     type="text"
                     placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    name="full_name"
+                   
+                 
                     required
                     className="w-full"
                   />
@@ -122,26 +132,33 @@ export default function ContactPage() {
                     Email *
                   </label>
                   <Input
-                    id="email"
                     type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    name="email"
                     required
                     className="w-full"
                   />
                 </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Contact Number *
+                  </label>
+                  <Input
+                    type="tel"
+                    name="contact_number"
+                    required
+                    className="w-full"
+                  />
+                </div>
+
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject *
                   </label>
                   <Input
-                    id="subject"
                     type="text"
                     placeholder="How can we help?"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    name="subject"
                     required
                     className="w-full"
                   />
@@ -155,8 +172,7 @@ export default function ContactPage() {
                     id="message"
                     placeholder="Tell us about your needs..."
                     rows={6}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    name="message"
                     required
                     className="w-full"
                   />

@@ -2,7 +2,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
 
+
 export function Footer() {
+ 
+  
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 lg:px-8 py-16">
