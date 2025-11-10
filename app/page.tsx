@@ -34,21 +34,21 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/services"><Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   Discover Our Solutions <ArrowRight className="ml-2" size={20} />
-                </Button>
-                <Button
+                </Button></Link>
+                <Link href="/about"><Button
                   size="lg"
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
                 >
                   Learn More
-                </Button>
+                </Button></Link>
               </div>
             </div>
             <div className="relative h-[400px] lg:h-[500px]">
               <img
-                src="/modern-office-team-collaboration-technology.jpg"
+                src="https://arotog.sirv.com/website/home_one.jpg"
                 alt="Professional team collaboration"
                 className="w-full h-full object-cover"
               />
@@ -80,14 +80,20 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold">{service.title}</h3>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">{service.desc}</p>
-                <Link
+                {/* <Link
                   href="/services"
                   className="inline-flex items-center text-sm font-medium text-accent hover:underline"
                 >
                   Learn More <ArrowRight size={16} className="ml-1" />
-                </Link>
+                </Link> */}
               </div>
             ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/services">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">View All Services <ArrowRight className="ml-2" size={20} /></Button>
+
+            </Link>
           </div>
         </div>
       </section>
@@ -122,7 +128,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative h-[500px]">
-              <img src="/business-analytics-dashboard-professional-workspac.jpg" alt="Business solutions" className="w-full h-full object-cover" />
+              <img src="https://arotog.sirv.com/website/home_two.jpg" alt="Business solutions" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -170,7 +176,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-16">
-            <img src="/diverse-professional-team-meeting-modern-office.jpg" alt="AROTOG team" className="w-full h-[400px] object-cover" />
+            <img src="https://arotog.sirv.com/website/home_three.jpg" alt="AROTOG team" className="w-full h-[400px] object-cover" />
           </div>
         </div>
       </section>
@@ -189,19 +195,19 @@ export default function HomePage() {
             {[
               {
                 name: "Sarah Johnson",
-                role: "CEO, TechCorp",
+                role: "Doctor, Dentine Health",
                 quote:
                   "AROTOG transformed our operations. Their expertise and dedication have been invaluable to our growth.",
               },
               {
                 name: "Michael Chen",
-                role: "Operations Director, GlobalCo",
+                role: "Operations Director, Alpha Venures,LLC",
                 quote:
                   "Outstanding service quality and professionalism. They truly understand business needs and deliver results.",
               },
               {
                 name: "Emily Rodriguez",
-                role: "Founder, StartupHub",
+                role: "Founder, Home from Home",
                 quote:
                   "The best outsourcing partner we've worked with. Reliable, efficient, and always exceeding expectations.",
               },
