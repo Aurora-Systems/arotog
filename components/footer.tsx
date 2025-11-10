@@ -85,11 +85,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80 font-light">
                 <Phone size={16} className="mt-1 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (681) 221-5728</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80 font-light">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 Business Ave, Suite 100, City, State 12345</span>
+                <span>1111B S Governors Ave, STE 39351, Dover, DE 19904, USA</span>
               </li>
             </ul>
           </div>

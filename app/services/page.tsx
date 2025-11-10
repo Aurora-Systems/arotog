@@ -17,7 +17,7 @@ export default function ServicesPage() {
         "Scalable solutions for peak demand periods",
         "Detailed reporting and analytics",
       ],
-      image: "customer support representative with headset professional office",
+      image: "https://arotog.sirv.com/website/44585.jpg",
     },
     {
       icon: Database,
@@ -30,7 +30,7 @@ export default function ServicesPage() {
         "Data mining and analysis",
         "Quality assurance and error checking",
       ],
-      image: "data analytics dashboard professional workspace technology",
+      image: "https://arotog.sirv.com/website/114415.jpg",
     },
     {
       icon: FileText,
@@ -43,7 +43,7 @@ export default function ServicesPage() {
         "Financial data processing",
         "HR support and payroll assistance",
       ],
-      image: "office administration professional workspace organized",
+      image: "https://arotog.sirv.com/website/2149288228.jpg",
     },
     {
       icon: MessageSquare,
@@ -56,7 +56,7 @@ export default function ServicesPage() {
         "Social media management",
         "Travel arrangements and coordination",
       ],
-      image: "virtual assistant working remotely professional home office",
+      image: "https://arotog.sirv.com/website/61978.jpg",
     },
   ]
 
@@ -104,7 +104,7 @@ export default function ServicesPage() {
               </div>
               <div className={`relative h-[400px] lg:h-[500px] ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
                 <img
-                  src={`/.jpg?height=500&width=600&query=${service.image}`}
+                  src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
                 />

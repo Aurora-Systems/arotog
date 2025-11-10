@@ -70,7 +70,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Call Us</h3>
-                    <p className="text-sm text-muted-foreground font-light">+1 (555) 123-4567</p>
+                    <p className="text-sm text-muted-foreground font-light">+1 (681) 221-5728</p>
                     <p className="text-sm text-muted-foreground font-light">Mon-Fri, 9:00 AM - 6:00 PM EST</p>
                   </div>
                 </div>
@@ -82,24 +82,20 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Visit Us</h3>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                      123 Business Avenue
+                    1111B S Governors Ave
+
                       <br />
-                      Suite 100
+                      STE 39351
+
                       <br />
-                      City, State 12345
+                      Dover, DE 19904, USA
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Map Placeholder */}
-              <div className="h-[300px] bg-muted">
-                <img
-                  src="/business-location-map-professional-office-building.jpg"
-                  alt="Office location map"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            
             </div>
 
             {/* Contact Form */}

@@ -56,8 +56,8 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-4xl font-bold">The AROTOG Story</h2>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Founded in 2025, AROTOG emerged from a vision to revolutionize business process outsourcing. We
-                recognized that businesses needed more than just cost savings—they needed a partner who understood their
+                AROTOG emerged from a vision to revolutionize business process outsourcing. We
+                recognized that businesses needed more than just cost savings they needed a partner who understood their
                 challenges and could deliver innovative solutions.
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
@@ -67,7 +67,7 @@ export default function AboutPage() {
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
                 As we continue to grow, our focus remains unchanged: elevating processes and empowering businesses to
-                thrive in an ever-evolving digital landscape.
+                thrive in an ever evolving digital landscape.
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 lg:px-8 bg-secondary text-secondary-foreground">
+      {/* <section className="py-20 px-4 lg:px-8 bg-secondary text-secondary-foreground">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl font-bold">Meet Our Leadership</h2>
@@ -168,7 +168,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

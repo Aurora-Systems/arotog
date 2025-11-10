@@ -48,7 +48,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[400px] lg:h-[500px]">
               <img
-                src="https://arotog.sirv.com/website/home_one.jpg"
+                src="https://arotog.sirv.com/website/121891.jpg"
                 alt="Professional team collaboration"
                 className="w-full h-full object-cover"
               />
