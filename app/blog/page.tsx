@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, User, ArrowRight } from "react-feather";
 import Link from "next/link";
-import { Header } from "@radix-ui/react-accordion";
 import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 interface Post {
   title: string;
@@ -93,25 +93,25 @@ const SubstackBlogGrid = () => {
       });
   }, []); // Empty dependency array prevents infinite loop
 
-  if (loading) {
-    return (
-      <section className="py-20 px-4 lg:px-8">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">Loading blog posts...</p>
-        </div>
-      </section>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <section className="py-20 px-4 lg:px-8">
+  //       <div className="container mx-auto text-center">
+  //         <p className="text-lg">Loading blog posts...</p>
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
-  if (error) {
-    return (
-      <section className="py-20 px-4 lg:px-8">
-        <div className="container mx-auto text-center">
-          <p className="text-red-500">{error}</p>
-        </div>
-      </section>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <section className="py-20 px-4 lg:px-8">
+  //       <div className="container mx-auto text-center">
+  //         <p className="text-red-500">{error}</p>
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
   return (
     <div>
