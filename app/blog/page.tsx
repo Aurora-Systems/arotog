@@ -19,7 +19,7 @@ interface Post {
 const fetchSubstackFeed = async (substackName: string): Promise<Post[]> => {
   try {
     const response = await fetch(
-      `https://api.rss2json.com/v1/api.json?rss_url=https://${substackName}.substack.com/feed`
+      `https://api.rss2json.com/v1/api.json?rss_url=https://arotog.substack.com/feed`
     );
     
     if (!response.ok) throw new Error("Failed to fetch blog feed.");
